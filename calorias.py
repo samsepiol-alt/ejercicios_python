@@ -78,5 +78,5 @@ def main():
         imprime_menu(menu)
     
     
-
-main()
+#llamar a la funcion main para hacer funcionar esto
+#main()
