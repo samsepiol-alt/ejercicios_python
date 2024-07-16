@@ -29,6 +29,7 @@ def calculadora(ingesta):
         c = calorias()
         comida[i]['calorias'] = c
         cal = cal+c
+        i = i++
         if (ingesta <= cal):
             print("Ha alcanzado el limite recomendado: ")
         resp = input('Agregar otro? y/n: ')
