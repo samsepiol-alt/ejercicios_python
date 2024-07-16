@@ -25,10 +25,12 @@ def calculadora(ingesta):
     print("CALCULADORA DE COMIDA")
     print("----------------------")
     while(not quit):
-        comida[i]['nombre']=input("Nombre: \n")
+        nombre = input("Nombre: \n")
         c = calorias()
-        comida[i]['calorias'] = c
+        comida.insert(i,{"nombre": nombre, "calorias":c})
         cal = cal+c
+        i = i+1
+        print(f'{cal}  {ingesta}')
         if (ingesta <= cal):
             print("Ha alcanzado el limite recomendado: ")
         resp = input('Agregar otro? y/n: ')
@@ -79,4 +81,4 @@ def main():
     
     
 #llamar a la funcion main para hacer funcionar esto
-#main()
+main()
