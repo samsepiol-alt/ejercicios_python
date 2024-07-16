@@ -28,9 +28,12 @@ def calculadora(ingesta):
         nombre = input("Nombre: \n")
         c = calorias()
         comida.insert(i,{"nombre": nombre, "calorias":c})
+        i = i + 1
         cal = cal+c
+        print(f'{cal}   {ingesta}')
         if (ingesta <= cal):
             print("Ha alcanzado el limite recomendado: ")
+
         resp = input('Agregar otro? y/n: ')
         if(resp == "n"):
             quit = True
@@ -74,7 +77,7 @@ def main():
     print(f'Su ingesta diaria recomendada es de {data[2]} y su IMC {data[3]}')
     ans = input('Agregar menú? y/n: ')
     if(ans == 'y'):
-        menu = calculadora(data[3])
+        menu = calculadora(data[2])
         imprime_menu(menu)
     
     
